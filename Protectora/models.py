@@ -14,7 +14,7 @@ class Animales(models.Model):
         return self.nombre
 
 
-class protectora(models.Model):
+class Protectora(models.Model):
     nombre = models.CharField(max_length = 200)
     Descripcion = models.TextField()
     Fecha_creacion = models.DateTimeField(default=timezone.now)
@@ -22,7 +22,7 @@ class protectora(models.Model):
     def __str__(self):
         return self.nombre
 
-class Colabroador(models.Model):
+class Colaborador(models.Model):
     nombre = models.CharField(max_length = 200)
     cargo = models.CharField(max_length = 200)
     Fecha_entrada_protectora = models.DateTimeField(default=timezone.now)

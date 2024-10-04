@@ -1,12 +1,16 @@
 from django.shortcuts import render
-from .models import protectora
+from .models import *
 
 # Create your views here.
-#def post_list(request) :
-#    protectora = protectora.objects.all()
-#    return render(request, 'Protectora/post_list.html', {'posts_mostrar': protectora})
 
+def listar_Protectoras(request) :
+    protectora = Protectora.objects.all()
+    return render(request, 'protectora/protectora_list.html', {'Protectora_mostrar': protectora})
 
-def post_list(request) :
-    Protectora = protectora.objects.all()
-    return render(request, 'protectora/post_list.html', {'protectora_mostrar': Protectora})
+def listar_Colaboradores(request) :
+    colaborador = Colaborador.objects.all()
+    return render(request, 'colaboradores/colaborador_list.html', {'colaborador_mostrar': colaborador})
+
+def listar_Animales(request) :
+    animales = Animales.objects.all()
+    return render(request, 'animales/animales_list.html', {'Animales_mostrar': animales})

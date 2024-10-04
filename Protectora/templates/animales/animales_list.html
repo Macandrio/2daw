@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Protectora</title>
+    <title>animales</title>
 </head>
 <body>
     <header>
         <a href="/"  >Django Protectora</a> 
     </header>
         
-    {% for protectora in Posts_mostrar %}
+    {% for animales in Animales_mostrar %}
         <article>
-            <nombre>Nombre : {{ protectora.nombre }}</nombre>
+            <nombre>Nombre : {{ animales.nombre }}</nombre>
         </article>
     {% endfor %}
 </body>
